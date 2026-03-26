@@ -17,6 +17,9 @@
 <meta name="twitter:description" content="新锐期刊分区速查 | 22,301本期刊 | 21个学科大类 | 实时搜索">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -34,7 +37,8 @@
   --shadow-lg:0 10px 40px rgba(0,0,0,0.12);
 }
 html{scroll-behavior:smooth}
-body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"cv02","cv03","cv04","cv11"}
+.journal-name{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;letter-spacing:-0.01em}
 
 .header{background:linear-gradient(135deg,#0c1426 0%,#162044 25%,#1e3a6e 50%,#2563eb 80%,#3b82f6 100%);color:#fff;padding:48px 20px 44px;text-align:center;position:relative;overflow:hidden}
 .header canvas{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;opacity:0.4}
@@ -54,18 +58,21 @@ body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Pin
 .tier-bar .b2{background:var(--t2);width:15.6%}
 .tier-bar .b3{background:var(--t3);width:32.5%}
 .tier-bar .b4{background:#818cf8;width:43.3%}
-.tier-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:10px;opacity:0.5}
+.tier-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:10px;opacity:0.5;padding-bottom:4px}
 
-.search-box{max-width:660px;margin:-30px auto 0;padding:0 16px;position:relative;z-index:10}
-.search-inner{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:20px;border:1px solid rgba(255,255,255,0.8)}
+.search-box{max-width:660px;margin:-26px auto 0;padding:0 16px;position:relative;z-index:10}
+.search-inner{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:20px 20px 16px;border:1px solid rgba(255,255,255,0.8)}
 .search-input-wrap{display:flex;align-items:center;background:#f8fafc;border:2px solid var(--border);border-radius:12px;padding:2px;transition:all 0.3s;position:relative}
 .search-input-wrap:focus-within{border-color:var(--primary);background:#fff;box-shadow:0 0 0 4px var(--primary-glow)}
 .search-input-wrap .icon{margin-left:14px;color:var(--text3);flex-shrink:0;transition:color 0.2s}
 .search-input-wrap:focus-within .icon{color:var(--primary)}
 .search-input{flex:1;border:none;background:transparent;font-size:16px;padding:12px;outline:none;color:var(--text)}
 .search-input::placeholder{color:#b8c4d0}
-.clear-btn{background:none;border:none;color:var(--text3);cursor:pointer;padding:8px 14px;font-size:20px;display:none;transition:all 0.2s;border-radius:8px}
+.clear-btn{background:none;border:none;color:var(--text3);cursor:pointer;padding:8px 12px;font-size:20px;display:none;transition:all 0.2s;border-radius:8px}
 .clear-btn:hover{color:var(--text);background:#f1f5f9}
+.exact-btn{display:none;padding:4px 10px;margin-right:6px;border-radius:6px;border:1.5px solid var(--border);background:#fff;font-size:11px;font-weight:600;color:var(--text3);cursor:pointer;transition:all 0.2s;white-space:nowrap;font-family:"Inter",sans-serif;letter-spacing:0.3px}
+.exact-btn:hover{border-color:var(--primary);color:var(--primary)}
+.exact-btn.active{background:var(--primary);color:#fff;border-color:var(--primary);box-shadow:0 1px 4px var(--primary-glow)}
 .kbd{display:inline-flex;align-items:center;justify-content:center;padding:2px 6px;background:#f1f5f9;border:1px solid var(--border);border-radius:4px;font-size:11px;color:var(--text3);margin-right:10px;font-family:monospace;line-height:1}
 
 /* Search history dropdown */
@@ -96,17 +103,17 @@ body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Pin
 .cat-option.active{background:var(--primary);color:#fff}
 .cat-option .cnt{font-size:11px;opacity:0.55;font-variant-numeric:tabular-nums}
 
-.notice{max-width:660px;margin:18px auto 0;padding:0 16px}
+.notice{max-width:660px;margin:20px auto 0;padding:0 16px}
 .notice-inner{background:linear-gradient(135deg,#f0f7ff,#eef2ff);border:1px solid #c7d2fe;border-radius:12px;padding:12px 16px;font-size:12px;color:#3730a3;display:flex;align-items:flex-start;gap:10px;line-height:1.6}
 .notice-inner svg{flex-shrink:0;margin-top:2px;opacity:0.7}
 .notice-inner a{color:#4f46e5;font-weight:600;text-decoration:none;border-bottom:1px dashed #a5b4fc}
 .notice-inner a:hover{border-bottom-style:solid}
 
-.result-info{max-width:660px;margin:18px auto 10px;padding:0 20px;font-size:13px;color:var(--text2);display:flex;justify-content:space-between;align-items:center}
+.result-info{max-width:660px;margin:20px auto 12px;padding:0 20px;font-size:13px;color:var(--text2);display:flex;justify-content:space-between;align-items:center}
 .result-info .tip{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:6px}
 .search-mode{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--primary);background:var(--primary-light);padding:2px 8px;border-radius:4px;margin-left:8px}
 
-.results{max-width:660px;margin:0 auto;padding:0 16px 60px}
+.results{max-width:660px;margin:0 auto;padding:0 16px 24px}
 .card{background:var(--card);border-radius:var(--radius);padding:16px 20px;margin-bottom:8px;box-shadow:var(--shadow-sm);border:1px solid #f1f5f9;border-left:4px solid var(--border);transition:all 0.25s ease;cursor:default}
 .card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:#e2e8f0}
 .card.t1{border-left-color:var(--t1)}.card.t2{border-left-color:var(--t2)}.card.t3{border-left-color:var(--t3)}.card.t4{border-left-color:var(--t4)}
@@ -134,7 +141,7 @@ body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Pin
 .btt.show{opacity:1;transform:translateY(0)}
 .btt:hover{background:var(--primary);color:#fff;border-color:var(--primary);box-shadow:0 4px 14px var(--primary-glow)}
 
-.recommend{max-width:660px;margin:0 auto;padding:0 16px}
+.recommend{max-width:660px;margin:0 auto;padding:0 16px 8px}
 .rec-card{background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border:1px solid #bae6fd;border-radius:var(--radius);padding:20px 24px;display:flex;align-items:center;gap:20px;transition:all 0.2s;text-decoration:none;color:var(--text)}
 .rec-card:hover{box-shadow:var(--shadow-md);border-color:#7dd3fc;transform:translateY(-1px)}
 .rec-icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#0284c7,#0ea5e9);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(14,165,233,0.25)}
@@ -144,7 +151,7 @@ body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Pin
 .rec-arrow{color:var(--text3);flex-shrink:0;transition:transform 0.2s}
 .rec-card:hover .rec-arrow{transform:translateX(3px);color:var(--primary)}
 
-.footer{max-width:660px;margin:0 auto;padding:16px 20px 36px;text-align:center;font-size:12px;color:var(--text3);line-height:2}
+.footer{max-width:660px;margin:0 auto;padding:20px 20px 40px;text-align:center;font-size:12px;color:var(--text3);line-height:2}
 .footer a{color:var(--text2);text-decoration:none;font-weight:500;transition:color 0.2s}
 .footer a:hover{color:var(--primary)}
 .footer .sep{margin:0 8px;opacity:0.3}
@@ -154,14 +161,34 @@ body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Pin
 .empty{text-align:center;padding:60px 20px;color:var(--text3)}.empty p{font-size:14px;margin-top:12px}.empty .hint{font-size:12px;margin-top:6px;opacity:0.7}
 
 @media(max-width:640px){
-  .header{padding:32px 16px 28px}.header h1{font-size:24px;letter-spacing:1.5px}
-  .stats-row{gap:24px}.stat .num{font-size:24px}
-  .search-inner{padding:14px}.search-input{font-size:15px;padding:10px}
-  .filters{gap:6px}.filter-btn,.cat-btn{padding:6px 12px;font-size:12px}
-  .card{padding:13px 14px;border-radius:12px}.journal-name{font-size:14px}
+  .header{padding:32px 16px 32px}.header h1{font-size:22px;letter-spacing:1px}
+  .header .sub{font-size:12px;margin-top:4px}
+  .stats-row{gap:20px;margin-top:18px}.stat .num{font-size:22px}
+  .tier-bar-wrap{margin-top:14px}
+  .search-box{margin:-22px auto 0}
+  .search-inner{padding:16px 14px 12px}
+  .search-input{font-size:15px;padding:10px 8px}
+  .filters{gap:6px;margin-top:10px}
+  .filter-btn,.cat-btn{padding:6px 12px;font-size:12px}
+  .filter-sep{height:16px;margin:0 1px}
+  .notice{margin-top:14px}
+  .notice-inner{font-size:11px;padding:10px 12px;gap:8px;line-height:1.5}
+  .result-info{margin:14px auto 8px;flex-direction:column;align-items:flex-start;gap:4px}
+  .results{padding:0 12px 40px}
+  .card{padding:14px;border-radius:12px;margin-bottom:8px}
+  .card-top{gap:8px}
+  .journal-name{font-size:14px;line-height:1.4}
+  .badge{padding:3px 10px;font-size:11px}
+  .badge.top{padding:2px 8px;font-size:10px}
+  .card-bottom{margin-top:8px}
   .card-link{font-size:11px;padding:3px 8px}
-  .notice-inner{font-size:11px;padding:10px 12px}
-  .result-info{flex-direction:column;align-items:flex-start;gap:4px}
+  .cat-tag{font-size:10px;padding:2px 8px}
+  .recommend{padding:0 12px}
+  .rec-card{padding:14px 16px;gap:14px}
+  .rec-icon{width:38px;height:38px;border-radius:10px}
+  .rec-title{font-size:13px}
+  .rec-desc{font-size:11px}
+  .exact-btn{padding:3px 8px;font-size:10px}
   .kbd{display:none}.btt{bottom:16px;right:16px;width:40px;height:40px}
 }
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
@@ -197,6 +224,7 @@ body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Pin
       <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input class="search-input" id="si" type="text" placeholder="输入期刊名称搜索，如 Nature, Lancet, Cell ..." autocomplete="off" autofocus>
       <button class="clear-btn" id="cb" onclick="clearSearch()">&times;</button>
+      <button class="exact-btn" id="exactBtn" onclick="toggleExact()" title="精确匹配：只搜完全包含关键词的期刊">精确</button>
       <span class="kbd" id="kbdHint">/</span>
       <div class="search-history" id="shPanel">
         <div class="sh-header"><span>最近搜索</span><button class="sh-clear" onclick="clearHistory(event)">清除</button></div>
@@ -256,7 +284,7 @@ body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Pin
 
 <div class="result-info" id="info">
   <span id="infoText"></span>
-  <span class="tip"><kbd class="kbd" style="margin:0">/</kbd> 搜索 · <kbd class="kbd" style="margin:0">Esc</kbd> 清空 · 引号精确匹配</span>
+  <span class="tip"><kbd class="kbd" style="margin:0">/</kbd> 搜索 · <kbd class="kbd" style="margin:0">Esc</kbd> 清空</span>
 </div>
 <div class="results" id="res">
   <div class="loading"><div class="spinner"></div><p style="margin-top:14px;color:var(--text3);font-size:13px">正在加载 22,301 本期刊数据...</p></div>
@@ -331,15 +359,12 @@ function hl(text,query){
 }
 
 // === Scoring for relevance ===
-function scoreMatch(r,idx,ql,qn){
+function scoreMatch(r,idx,ql,qn,exact){
   const name=r[1],nameLower=name.toLowerCase(),nameNorm=DN[idx];
   let score=0;
-  if(qExact){
-    // Exact mode: must contain exact substring
-    if(!nameLower.includes(ql))return -1;
+  if(exact){
     if(nameLower===ql)return 1000;
-    if(nameLower.startsWith(ql))return 800;
-    return 500;
+    return -1;
   }
   // Exact substring match (highest)
   if(nameLower.includes(ql)){
@@ -366,13 +391,15 @@ function scoreMatch(r,idx,ql,qn){
 
 function doFilter(){
   const ql=q.toLowerCase();
-  // Detect exact mode: "quoted query"
-  qExact=false;
+  // Exact mode controlled by button (qExact is toggled by toggleExact())
+  // Also support "quoted" syntax for power users
+  let manualExact=false;
   let searchQ=q;
   if(q.startsWith('"')&&q.endsWith('"')&&q.length>2){
-    qExact=true;
+    manualExact=true;
     searchQ=q.slice(1,-1);
   }
+  const isExact=qExact||manualExact;
   const qlClean=searchQ.toLowerCase();
   qNorm=norm(searchQ);
 
@@ -384,7 +411,7 @@ function doFilter(){
     if(fTier&&r[2]!==fTier)continue;
     if(fTop&&!r[3])continue;
     if(qlClean){
-      const s=scoreMatch(r,i,qlClean,qNorm);
+      const s=scoreMatch(r,i,qlClean,qNorm,isExact);
       if(s<0)continue;
       scored.push([r,s]);
     }else{
@@ -405,12 +432,12 @@ function doFilter(){
   let infoHtml=qlClean||fCat||fTier||fTop
     ?'找到 '+filtered.length.toLocaleString()+' 本期刊'
     :'共 '+filtered.length.toLocaleString()+' 本期刊';
-  if(qExact)infoHtml+='<span class="search-mode">精确匹配</span>';
+  if(isExact)infoHtml+='<span class="search-mode">精确匹配</span>';
   else if(qlClean&&scored.some(x=>x[1]>=400&&x[1]<700))infoHtml+='<span class="search-mode">模糊匹配</span>';
   $info.innerHTML=infoHtml;
 
   if(filtered.length===0){
-    $r.innerHTML='<div class="empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M8 11h6"/></svg><p>没有找到匹配的期刊</p><div class="hint">试试换个关键词，或用引号精确匹配如 "JACC"</div></div>';
+    $r.innerHTML='<div class="empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M8 11h6"/></svg><p>没有找到匹配的期刊</p><div class="hint">'+(isExact?'精确模式下无结果，试试关闭精确匹配':'试试换个关键词或调整筛选条件')+'</div></div>';
   }else renderMore();
 
   // Save to URL hash
@@ -438,7 +465,7 @@ function updateStats(list){
 function renderMore(){
   if(busy||shown>=filtered.length)return;busy=true;
   const end=Math.min(shown+PG,filtered.length);
-  const searchQ=qExact?q.slice(1,-1):q;
+  const searchQ=(q.startsWith('"')&&q.endsWith('"')&&q.length>2)?q.slice(1,-1):q;
   let h='';
   for(let i=shown;i<end;i++){
     const r=filtered[i],t='t'+r[2],cn=CN[r[0]]||'';
@@ -466,8 +493,10 @@ window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimation
 // === Search input ===
 let dt;
 $i.addEventListener('input',()=>{
-  $c.style.display=$i.value?'block':'none';
-  $kbdHint.style.display=$i.value?'none':'';
+  const hasVal=!!$i.value;
+  $c.style.display=hasVal?'block':'none';
+  document.getElementById('exactBtn').style.display=hasVal?'inline-flex':'none';
+  $kbdHint.style.display=hasVal?'none':'';
   hideHistory();
   clearTimeout(dt);
   dt=setTimeout(()=>{q=$i.value.trim();doFilter()},180);
@@ -476,7 +505,8 @@ $i.addEventListener('input',()=>{
 $i.addEventListener('focus',()=>{if(!$i.value)showHistory()});
 $i.addEventListener('keydown',e=>{if(e.key==='Enter'&&q)saveHistory(q)});
 
-function clearSearch(){$i.value='';$c.style.display='none';$kbdHint.style.display='';q='';qExact=false;doFilter();$i.focus();hideHistory()}
+function clearSearch(){$i.value='';$c.style.display='none';$kbdHint.style.display='';document.getElementById('exactBtn').style.display='none';q='';qExact=false;document.getElementById('exactBtn').classList.remove('active');doFilter();$i.focus();hideHistory()}
+function toggleExact(){qExact=!qExact;document.getElementById('exactBtn').classList.toggle('active',qExact);if(q)doFilter()}
 
 // === Search History (localStorage) ===
 const SH_KEY='xr_search_history';
@@ -526,6 +556,7 @@ function syncToHash(){
   if(fCat)p.set('cat',fCat);
   if(fTier)p.set('tier',fTier);
   if(fTop)p.set('top','1');
+  if(qExact)p.set('exact','1');
   const hash=p.toString();
   history.replaceState(null,null,hash?'#'+hash:'#');
 }
@@ -548,6 +579,11 @@ function loadFromHash(){
     fTop=true;
     const btn=document.querySelector('[data-top]');
     if(btn)btn.classList.add('active');
+  }
+  if(p.get('exact')==='1'){
+    qExact=true;
+    document.getElementById('exactBtn').classList.add('active');
+    if(q)document.getElementById('exactBtn').style.display='inline-flex';
   }
 }
 

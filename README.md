@@ -4,7 +4,7 @@
 
 ## 在线使用
 
-👉 **https://aarongig.github.io/xr-journal-query/**
+👉 **<https://aarongig.github.io/xr-journal-query/>**
 
 无需安装，打开即用。也可下载 `index.html` 文件到本地，双击浏览器打开离线使用。
 
@@ -32,10 +32,6 @@
 3. 本工具为非官方项目，与 XR-Scholar 平台无任何关联或授权关系。如有侵权，请联系删除。
 4. 使用者应自行核实数据，因使用本工具产生的任何后果，开发者不承担责任。
 5. 本工具不存储、不传输任何用户数据。
-
-## 相关项目
-
-- [pdf2zh-desktop](https://github.com/AaronGIG/pdf2zh-desktop) — 免费开源 PDF 翻译工具
 
 ## License
 

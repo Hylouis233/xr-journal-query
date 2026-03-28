@@ -2,3 +2,4 @@ __pycache__/*
 *.py
 *.xls*
 *.jsonl
+missing_list.txt

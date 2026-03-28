@@ -4,7 +4,7 @@
 
 ## 在线使用
 
-👉 **<https://aarongig.github.io/xr-journal-query/>**
+👉 **<https://hylouis.github.io/xr-journal-query/>**
 
 无需安装，打开即用。也可下载 `index.html` 文件到本地，双击浏览器打开离线使用。
 
